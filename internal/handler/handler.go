@@ -52,6 +52,9 @@ func (h *handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	case r.Method == http.MethodGet && TaskURL.MatchString(r.URL.Path):
 		h.GetAll(w, r)
 		return
+	default:
+		NotFoundHandler(w, r)
+		return
 	}
 }
 
