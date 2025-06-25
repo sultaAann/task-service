@@ -15,7 +15,7 @@ Task Service — это простой RESTful API на Go для управле
 ### Сборка и запуск
 
 ```sh
-go build -o task-service ./cmd/main.go
+go build -o task-service ./cmd/task-service/main.go
 ./task-service
 ```
 или с помощью Docker:
