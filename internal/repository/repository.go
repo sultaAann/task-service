@@ -30,6 +30,7 @@ func (r *repository) GetById(id int) (*Task, error) {
 		CreatedAt:   t.CreatedAt,
 		StartedAt:   t.StartedAt,
 		CompletedAt: t.CompletedAt,
+		Description: t.Description,
 	}
 	if !exists {
 		return nil, custom_errors.NewNotFoundError("DB:", id, "Task Not Found")

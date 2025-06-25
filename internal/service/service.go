@@ -45,7 +45,7 @@ func (s service) DeleteById(id int) error {
 }
 
 func (s service) work(id int) {
-	time.Sleep(1 * time.Second)
+	time.Sleep(10 * time.Second)
 
 	t, err := s.r.GetById(id)
 	if err != nil {
